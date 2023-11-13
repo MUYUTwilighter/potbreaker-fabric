@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cool.muyucloud.potbreaker.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DecoratedPotBlockMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

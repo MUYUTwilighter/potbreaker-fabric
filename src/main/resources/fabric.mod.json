@@ -1,0 +1,29 @@
+{
+    "schemaVersion": 1,
+    "id": "pot_breaker",
+    "version": "${version}",
+    "name": "potbreaker-fabric",
+    "description": "",
+    "authors": [],
+    "contact": {
+        "repo": "https://github.com/14846/potbreaker-fabric"
+    },
+    "license": "All-Rights-Reserved",
+    "icon": "assets/pot_breaker/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "client": [
+        ],
+        "main": [
+            "cool.muyucloud.potbreaker.PotBreaker"
+        ]
+    },
+    "mixins": [
+        "pot_breaker.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": "*",
+        "fabric": "*",
+        "minecraft": "*"
+    }
+}

@@ -1,0 +1,21 @@
+plugins {
+    id("java-library")
+    id("java")
+}
+
+group = "cool.muyucloud.potbreaker"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation('cool.muyucloud.tunnel:tunnel:1.0.0')
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,15 @@
+{
+    "tunnels": [
+        "cool.muyucloud.potbreaker.tunnel.McBlockEntityImpl",
+        "cool.muyucloud.potbreaker.tunnel.McBlockHitResultImpl",
+        "cool.muyucloud.potbreaker.tunnel.McBlockPosImpl",
+        "cool.muyucloud.potbreaker.tunnel.McDecoratedPotBlockEntityImpl",
+        "cool.muyucloud.potbreaker.tunnel.McDirectionImpl",
+        "cool.muyucloud.potbreaker.tunnel.McHandImpl",
+        "cool.muyucloud.potbreaker.tunnel.McItemStackImpl",
+        "cool.muyucloud.potbreaker.tunnel.McItemUsageContextImpl",
+        "cool.muyucloud.potbreaker.tunnel.McPlayerEntityImpl",
+        "cool.muyucloud.potbreaker.tunnel.McVec3dImpl",
+        "cool.muyucloud.potbreaker.tunnel.McWorldImpl"
+    ]
+}
