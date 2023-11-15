@@ -2,6 +2,8 @@ package cool.muyucloud.potbreaker.tunnel;
 
 import cool.muyucloud.tunnel.annotation.Tunnel;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 
 @Tunnel
@@ -26,5 +28,17 @@ public class McPlayerEntityImpl implements McPlayerEntity {
     public McVec3d getPos() {
         Vec3d pos = playerEntity.getPos();
         return McVec3dImpl.of(pos);
+    }
+
+    @Override
+    public McItemStack getMainHandStack() {
+        ItemStack itemStack = playerEntity.getMainHandStack();
+        return McItemStackImpl.of(itemStack);
+    }
+
+    @Override
+    public void setMainHandStack(McItemStack mcItemStack) {
+        ItemStack itemStack = (ItemStack) mcItemStack.get();
+        playerEntity.setStackInHand(Hand.MAIN_HAND, itemStack);
     }
 }

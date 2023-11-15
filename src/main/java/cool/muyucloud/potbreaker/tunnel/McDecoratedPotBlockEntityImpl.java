@@ -27,4 +27,10 @@ public class McDecoratedPotBlockEntityImpl implements McDecoratedPotBlockEntity 
         ItemStack itemStack = decoratedPotBlockEntity.getStack();
         return McItemStackImpl.of(itemStack);
     }
+
+    @Override
+    public void setStack(McItemStack mcItemStack) {
+        ItemStack itemStack = (ItemStack) mcItemStack.get();
+        decoratedPotBlockEntity.setStack(itemStack);
+    }
 }

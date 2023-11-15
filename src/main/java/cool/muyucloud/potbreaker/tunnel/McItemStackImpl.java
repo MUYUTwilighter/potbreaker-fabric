@@ -1,8 +1,17 @@
 package cool.muyucloud.potbreaker.tunnel;
 
 import cool.muyucloud.tunnel.annotation.Tunnel;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.data.server.tag.ItemTagProvider;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
 
 @Tunnel
 public class McItemStackImpl implements McItemStack {
@@ -20,11 +29,31 @@ public class McItemStackImpl implements McItemStack {
     }
 
     @Override
-    public void initTunnel() {}
+    public void initTunnel() {
+    }
 
     @Override
-    public void useOnBlock(McItemUsageContext mcContext) {
+    public McActionResult useOnBlock(McItemUsageContext mcContext) {
         ItemUsageContext context = (ItemUsageContext) mcContext.get();
-        itemStack.useOnBlock(context);
+        ActionResult actionResult = itemStack.useOnBlock(context);
+        return McActionResultImpl.of(actionResult);
+    }
+
+    @Override
+    public McItemStack use(McWorld mcWorld, McPlayerEntity mcPlayer, McHand mcHand) {
+        World world = (World) mcWorld.get();
+        PlayerEntity player = (PlayerEntity) mcPlayer.get();
+        Hand hand = (Hand) mcHand.get();
+        TypedActionResult<ItemStack> result = itemStack.use(world, player, hand);
+        ItemStack stack = result.getValue();
+        if (result.getResult() == ActionResult.CONSUME) {
+            stack.setCount(stack.getCount() - 1);
+        }
+        return McItemStackImpl.of(stack);
+    }
+
+    @Override
+    public Integer getCount() {
+        return itemStack.getCount();
     }
 }

@@ -4,4 +4,8 @@ import cool.muyucloud.tunnel.McTunnel;
 
 public interface McPlayerEntity extends McTunnel {
     McVec3d getPos();
+
+    McItemStack getMainHandStack();
+
+    void setMainHandStack(McItemStack mcItemStack);
 }
