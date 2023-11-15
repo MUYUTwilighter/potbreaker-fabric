@@ -12,13 +12,13 @@ Example project of [Tunnel](https://github.com/Nova-Committee/tunnel)
 
 ## Introduction
 
-When a player breaks a decorated pot, the item in the pot will be *USED ON BLOCK* automatically.
+When a player breaks a decorated pot, the item in the pot will be *USED* automatically.
 
-For example, if the decorated pot contains a pig spawn egg with tools that have tag `#minecraft:decorated_pot_tools`
+For example, if the decorated pot contains a pig spawn egg
 
 ![](http://muyucloud.cool:22222/mod/pot_breaker/1.png)
 
-When a player breaks the pot, the egg will be used on the block under the pot, which summons a pig
+When a player breaks the pot with tools included in tag `#minecraft:decorated_pot_tools`, the spawn egg will be used on the block under the pot, which summons a pig
 
 ![](http://muyucloud.cool:22222/mod/pot_breaker/2.png)
 
