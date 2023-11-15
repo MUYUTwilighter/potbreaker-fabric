@@ -16,11 +16,11 @@ When a player breaks a decorated pot, the item in the pot will be *USED ON BLOCK
 
 For example, if the decorated pot contains a pig spawn egg with tools that have tag `#minecraft:decorated_pot_tools`
 
-[](http://muyucloud.cool:22222/mod/pot_breaker/1.png)
+![](http://muyucloud.cool:22222/mod/pot_breaker/1.png)
 
 When a player breaks the pot, the egg will be used on the block under the pot, which summons a pig
 
-[](http://muyucloud.cool:22222/mod/pot_breaker/2.png)
+![](http://muyucloud.cool:22222/mod/pot_breaker/2.png)
 
 ## Config
 
