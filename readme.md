@@ -21,3 +21,9 @@ For example, if the decorated pot contains a pig spawn egg with tools that have 
 When a player breaks the pot, the egg will be used on the block under the pot, which summons a pig
 
 [](http://muyucloud.cool:22222/mod/pot_breaker/2.png)
+
+## Config
+
+- `place` : allow attempt to invoke item-place, influencing: spawn egg, etc. default: true;
+- `use` : allow attempt to invoke item use (won't invoke if item-place is invokable), influencing: splash potions, eggs, etc. default: false;
+- `maxExecutes`: maximum attempts of item usage (if more than one item in the pot), 
