@@ -2,8 +2,6 @@ package cool.muyucloud.potbreaker.mod;
 
 import cool.muyucloud.potbreaker.tunnel.*;
 
-import java.util.Set;
-
 public class DecoratedPotBlockMixinImpl {
     private static final Config CONFIG = Config.INSTANCE;
 

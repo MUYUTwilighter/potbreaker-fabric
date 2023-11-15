@@ -44,12 +44,9 @@ public class McItemStackImpl implements McItemStack {
         World world = (World) mcWorld.get();
         PlayerEntity player = (PlayerEntity) mcPlayer.get();
         Hand hand = (Hand) mcHand.get();
-        TypedActionResult<ItemStack> result = itemStack.use(world, player, hand);
-        ItemStack stack = result.getValue();
-        if (result.getResult() == ActionResult.CONSUME) {
-            stack.setCount(stack.getCount() - 1);
-        }
-        return McItemStackImpl.of(stack);
+        itemStack.use(world, player, hand);
+        ItemStack stackResult = itemStack.finishUsing(world, player);
+        return McItemStackImpl.of(stackResult);
     }
 
     @Override
