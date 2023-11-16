@@ -2,8 +2,10 @@ package cool.muyucloud.potbreaker.tunnel;
 
 import cool.muyucloud.tunnel.McTunnel;
 
-public interface McWorld extends McTunnel {
-    Boolean isClient();
+public abstract class McWorld implements McTunnel {
+    public abstract Boolean isClient();
 
-    McBlockEntity getBlockEntity(McBlockPos mcPos);
+    public abstract McBlockEntity getBlockEntity(McBlockPos mcPos);
+
+    public abstract Boolean isReceivingRedstonePower(McBlockPos mcPos);
 }

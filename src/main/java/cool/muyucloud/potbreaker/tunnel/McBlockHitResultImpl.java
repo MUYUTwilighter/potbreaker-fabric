@@ -34,4 +34,10 @@ public class McBlockHitResultImpl extends McBlockHitResult {
     public void initTunnel() {
         TUNNEL = new McBlockHitResultImpl();
     }
+
+    @Override
+    public McBlockPos getBlockPos() {
+        BlockPos blockPos = blockHitResult.getBlockPos();
+        return McBlockPosImpl.of(blockPos);
+    }
 }

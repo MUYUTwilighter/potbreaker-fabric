@@ -8,4 +8,6 @@ public interface McItemStack extends McTunnel {
     McItemStack use(McWorld mcWorld, McPlayerEntity mcPlayer, McHand mcHand);
 
     Integer getCount();
+
+    McItem getItem();
 }

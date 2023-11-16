@@ -8,10 +8,14 @@
         "cool.muyucloud.potbreaker.tunnel.McDecoratedPotBlockEntityImpl",
         "cool.muyucloud.potbreaker.tunnel.McDirectionImpl",
         "cool.muyucloud.potbreaker.tunnel.McHandImpl",
+        "cool.muyucloud.potbreaker.tunnel.McIdentifierImpl",
         "cool.muyucloud.potbreaker.tunnel.McItemStackImpl",
         "cool.muyucloud.potbreaker.tunnel.McItemUsageContextImpl",
         "cool.muyucloud.potbreaker.tunnel.McPlayerEntityImpl",
+        "cool.muyucloud.potbreaker.tunnel.McRegistryImpl",
         "cool.muyucloud.potbreaker.tunnel.McVec3dImpl",
-        "cool.muyucloud.potbreaker.tunnel.McWorldImpl"
+        "cool.muyucloud.potbreaker.tunnel.McWorldImpl",
+        "cool.muyucloud.potbreaker.tunnel.ServerLiteralArgImpl",
+        "cool.muyucloud.potbreaker.tunnel.CommandImpl"
     ]
 }

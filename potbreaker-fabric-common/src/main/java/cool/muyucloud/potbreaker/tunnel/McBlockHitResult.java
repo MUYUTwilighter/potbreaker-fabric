@@ -6,4 +6,6 @@ public abstract class McBlockHitResult implements McTunnel {
     public static McBlockHitResult TUNNEL;
 
     public abstract McBlockHitResult of(McVec3d mcPos, McDirection mcSide, McBlockPos mcBlockPos, boolean insideBlock);
+
+    public abstract McBlockPos getBlockPos();
 }

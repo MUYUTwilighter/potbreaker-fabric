@@ -1,36 +1,40 @@
 package cool.muyucloud.potbreaker.tunnel;
 
-import com.google.gson.Gson;
 import cool.muyucloud.tunnel.McTunnel;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
+import java.io.Serializable;
 import java.nio.file.Path;
 import java.util.HashSet;
 
 public abstract class Config implements Serializable, McTunnel {
     public static Path CONFIG_PATH = Path.of("pot_breaker.json");
-    public static Config INSTANCE;
+    public static Config CONFIG;
 
-    private Boolean use = false;
+    private Boolean onBreak = true;
+    private Boolean onProject = true;
+    private Boolean redstone = true;
+    private Integer maxUses = 1;
+    private HashSet<String> whitelist = null;
 
-    private Boolean place = true;
-    private Integer maxExecutes = 1;
-    private HashSet<String> whitelist = new HashSet<>();
-
-    public Boolean canUse() {
-        return use;
+    public Boolean allowOnBreak() {
+        return onBreak;
     }
 
-    public Boolean canPlace() {
-        return place;
+    public Boolean allowOnProject() {
+        return onProject;
     }
 
-    public Integer getMaxExecutes() {
-        return maxExecutes;
+    public Boolean requireRedstone() {
+        return redstone;
+    }
+
+    public Integer getMaxUses() {
+        return maxUses;
     }
 
     public HashSet<String> getWhitelist() {
         return whitelist;
     }
+
+    public abstract void load();
 }

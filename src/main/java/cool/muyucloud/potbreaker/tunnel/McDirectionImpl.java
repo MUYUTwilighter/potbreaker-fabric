@@ -21,5 +21,6 @@ public class McDirectionImpl extends McDirection {
     @Override
     public void initTunnel() {
         UP = of(Direction.UP);
+        DOWN = of(Direction.DOWN);
     }
 }

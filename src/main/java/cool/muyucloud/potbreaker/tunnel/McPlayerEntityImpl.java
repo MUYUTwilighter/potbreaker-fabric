@@ -7,10 +7,10 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.math.Vec3d;
 
 @Tunnel
-public class McPlayerEntityImpl implements McPlayerEntity {
+public class McPlayerEntityImpl extends McPlayerEntity {
     PlayerEntity playerEntity;
 
-    public static McPlayerEntityImpl of(PlayerEntity playerEntity) {
+    public static McPlayerEntity of(PlayerEntity playerEntity) {
         McPlayerEntityImpl mcPlayerEntity = new McPlayerEntityImpl();
         mcPlayerEntity.playerEntity = playerEntity;
         return mcPlayerEntity;
@@ -22,7 +22,8 @@ public class McPlayerEntityImpl implements McPlayerEntity {
     }
 
     @Override
-    public void initTunnel() {}
+    public void initTunnel() {
+    }
 
     @Override
     public McVec3d getPos() {
@@ -40,5 +41,35 @@ public class McPlayerEntityImpl implements McPlayerEntity {
     public void setMainHandStack(McItemStack mcItemStack) {
         ItemStack itemStack = (ItemStack) mcItemStack.get();
         playerEntity.setStackInHand(Hand.MAIN_HAND, itemStack);
+    }
+
+    @Override
+    public double getX() {
+        return playerEntity.getX();
+    }
+
+    @Override
+    public double getY() {
+        return playerEntity.getY();
+    }
+
+    @Override
+    public double getZ() {
+        return playerEntity.getZ();
+    }
+
+    @Override
+    public void setPos(double x, double y, double z) {
+        playerEntity.setPos(x, y, z);
+    }
+
+    @Override
+    public float getPitch() {
+        return playerEntity.getPitch();
+    }
+
+    @Override
+    public void setPitch(float pitch) {
+        playerEntity.setPitch(pitch);
     }
 }

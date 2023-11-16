@@ -1,16 +1,12 @@
 package cool.muyucloud.potbreaker.tunnel;
 
 import cool.muyucloud.tunnel.annotation.Tunnel;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.data.server.tag.ItemTagProvider;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 @Tunnel
@@ -52,5 +48,11 @@ public class McItemStackImpl implements McItemStack {
     @Override
     public Integer getCount() {
         return itemStack.getCount();
+    }
+
+    @Override
+    public McItem getItem() {
+        Item item = itemStack.getItem();
+        return McItemImpl.of(item);
     }
 }

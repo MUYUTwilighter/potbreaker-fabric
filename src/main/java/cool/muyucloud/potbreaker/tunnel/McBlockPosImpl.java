@@ -14,7 +14,7 @@ public class McBlockPosImpl implements McBlockPos {
     }
 
     @Override
-    public BlockPos get() {
+    public Object get() {
         return blockPos;
     }
 
@@ -25,5 +25,20 @@ public class McBlockPosImpl implements McBlockPos {
     public McBlockPos down() {
         BlockPos pos = blockPos.down();
         return of(pos);
+    }
+
+    @Override
+    public int getX() {
+        return blockPos.getX();
+    }
+
+    @Override
+    public int getY() {
+        return blockPos.getY();
+    }
+
+    @Override
+    public int getZ() {
+        return blockPos.getZ();
     }
 }

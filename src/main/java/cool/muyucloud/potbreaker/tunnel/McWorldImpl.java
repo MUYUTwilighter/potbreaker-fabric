@@ -3,17 +3,22 @@ package cool.muyucloud.potbreaker.tunnel;
 import cool.muyucloud.tunnel.annotation.Tunnel;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.DecoratedPotBlockEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 @Tunnel
-public class McWorldImpl implements McWorld {
+public class McWorldImpl extends McWorld {
     private World world;
 
     public static McWorld of(World world) {
-        McWorldImpl mcWorld = new McWorldImpl();
-        mcWorld.world = world;
-        return mcWorld;
+        if (world instanceof ServerWorld serverWorld) {
+            return McServerWorldImpl.of(serverWorld);
+        } else {
+            McWorldImpl mcWorld = new McWorldImpl();
+            mcWorld.world = world;
+            return mcWorld;
+        }
     }
 
     @Override
@@ -38,5 +43,11 @@ public class McWorldImpl implements McWorld {
         } else {
             return McBlockEntityImpl.of(be);
         }
+    }
+
+    @Override
+    public Boolean isReceivingRedstonePower(McBlockPos mcPos) {
+        BlockPos pos = (BlockPos) mcPos.get();
+        return world.isReceivingRedstonePower(pos);
     }
 }
