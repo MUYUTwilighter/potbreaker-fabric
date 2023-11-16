@@ -24,6 +24,14 @@ When a player breaks the pot with tools included in tag `#minecraft:decorated_po
 
 ## Config
 
-- `place` : allow attempt to invoke item-place, influencing: spawn egg, etc. default: true;
-- `use` : allow attempt to invoke item use (won't invoke if item-place is invokable), influencing: splash potions, eggs, etc. default: false;
-- `maxExecutes`: maximum attempts of item usage (if more than one item in the pot), 
+Config file is located at "<ConfigDir>/potbreaker.json"
+
+- `onBreak` : allow executing usage when player break decorated pot by hand, default: true;
+- `onProject`: allow executing usage when player break decorated pot by projectiles, default: false;
+- `redstone`: consider redstone power when trying to invoke usage
+- `maxUses`: maximum attempts to invoking item usage
+- `whitelist`: a set of items or item tags. When null, all items is allowed be used; when assigned (including empty set), only item(s) assigned are allowed to be used.
+
+## Command
+
+- `potbreaker load`: reload config from file and apply now
