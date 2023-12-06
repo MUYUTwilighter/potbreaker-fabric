@@ -14,6 +14,7 @@ public abstract class Config implements Serializable, McTunnel {
     private Boolean onProject = true;
     private Boolean redstone = true;
     private Integer maxUses = 1;
+    private String lang = "en_us.json";
     private HashSet<String> whitelist = null;
 
     public Boolean allowOnBreak() {
@@ -34,6 +35,10 @@ public abstract class Config implements Serializable, McTunnel {
 
     public HashSet<String> getWhitelist() {
         return whitelist;
+    }
+
+    public String getLang() {
+        return lang;
     }
 
     public abstract void load();

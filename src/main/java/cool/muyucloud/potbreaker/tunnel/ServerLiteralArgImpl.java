@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 
+import java.util.function.Predicate;
+
 @Tunnel
 public class ServerLiteralArgImpl extends ServerLiteralArg {
     LiteralArgumentBuilder<ServerCommandSource> arg;
@@ -30,10 +32,11 @@ public class ServerLiteralArgImpl extends ServerLiteralArg {
     }
 
     @Override
-    public ServerLiteralArg execute(Runnable runnable) {
+    public ServerLiteralArg execute(Predicate<ServerCommandContext> predicate) {
         this.arg.executes(context -> {
-            runnable.run();
-            return 1;
+            ServerCommandContext serverCommandContext = ServerCommandContextImpl.of(context);
+            boolean result = predicate.test(serverCommandContext);
+            return result ? 1 : 0;
         });
         return this;
     }

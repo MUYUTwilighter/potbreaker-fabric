@@ -1,5 +1,6 @@
 {
     "tunnels": [
+        "cool.muyucloud.potbreaker.tunnel.TranslatorImpl",
         "cool.muyucloud.potbreaker.tunnel.ConfigImpl",
         "cool.muyucloud.potbreaker.tunnel.McActionResultImpl",
         "cool.muyucloud.potbreaker.tunnel.McBlockEntityImpl",
@@ -11,10 +12,12 @@
         "cool.muyucloud.potbreaker.tunnel.McIdentifierImpl",
         "cool.muyucloud.potbreaker.tunnel.McItemStackImpl",
         "cool.muyucloud.potbreaker.tunnel.McItemUsageContextImpl",
+        "cool.muyucloud.potbreaker.tunnel.McMutableTextImpl",
         "cool.muyucloud.potbreaker.tunnel.McPlayerEntityImpl",
         "cool.muyucloud.potbreaker.tunnel.McRegistryImpl",
         "cool.muyucloud.potbreaker.tunnel.McVec3dImpl",
         "cool.muyucloud.potbreaker.tunnel.McWorldImpl",
+        "cool.muyucloud.potbreaker.tunnel.ServerCommandContextImpl",
         "cool.muyucloud.potbreaker.tunnel.ServerLiteralArgImpl",
         "cool.muyucloud.potbreaker.tunnel.CommandImpl"
     ]
