@@ -2,16 +2,10 @@ package cool.muyucloud.potbreaker.mixin;
 
 import cool.muyucloud.potbreaker.mod.DecoratedPotBlockMixinImpl;
 import cool.muyucloud.potbreaker.tunnel.*;
-import net.fabricmc.fabric.api.entity.FakePlayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DecoratedPotBlock;
-import net.minecraft.command.argument.ItemPredicateArgumentType;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.predicate.item.ItemPredicate;
-import net.minecraft.registry.Registries;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
