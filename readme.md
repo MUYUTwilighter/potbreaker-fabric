@@ -1,3 +1,9 @@
+# 停止更新 Stopped Update
+
+该模组目前已暂停相关开发工作，除非有足够多的再开发请求或作者本人想开了。
+
+This mod will no longer receive any further update unless there are considerable amount of re-open request or the author (me) decided to re-open it.
+
 # Pot Breaker
 
 A Minecraft mod that let decorated pot break in a Plant Vs. Zombies way!
